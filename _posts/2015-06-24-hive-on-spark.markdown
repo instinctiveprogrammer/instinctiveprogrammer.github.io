@@ -10,9 +10,9 @@ Spark-sql has now provided compatibility with hive, where you can directly creat
 You can check the release info from [https://spark.apache.org/sql](https://spark.apache.org/sql)
 &nbsp;
 
-##SETUP : ##
+###SETUP : ###
 
-But the default release of Spark-Sql does not contain hive compatibility and it prompts you to build your very own distribution of spark from the source code.
+The default release of Spark-Sql does not contain hive compatibility and it prompts you to build your very own distribution of spark from the source code.
 
 **To build a Hive compatible Spark distro :**
 
@@ -43,13 +43,13 @@ val results = sqlContext.sql("Your Query")
 
 You can get more information about SparkSQL support for Hive from [https://spark.apache.org/docs/latest/sql-programming-guide.html#hive-tables](https://cwiki.apache.org/confluence/display/Hive/Hive+on+Spark-Sql)
 
-Also with Spark-1.3, SparkSQL has introduced a new DataFrame API that provides powerful and convenient operators when working with structured datasets. With this in place over the data loaded from Hive you can easily perform complex processing in a much simpler manner, than having to write complex UDF and UDAF's.
+Also with Spark-1.3, SparkSQL has introduced a new DataFrame API that provides powerful and convenient operators when working with structured datasets. With this in place after the data loaded from Hive you can easily perform complex processing in a much simpler manner, then having to write complex UDF and UDAF's.
 
 --------------------------------------------------
 
 &nbsp;
 
-##PERFORMANCE : ##
+###PERFORMANCE : ###
 
 Its difficult to quantify performance. But in my case I got more than **double** the performance.<br/>
 For a hive query which used to take 20 min on a 10 node cluster, got executed within 10 min in a spark-shell that too in standalone mode (single machine).
